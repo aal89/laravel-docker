@@ -2,6 +2,12 @@
 
 Generic docker image for Laravel applications with minimal footprint and support for cronjobs.
 
+### Features
+
+Base image is an alpine image with the latest PHP installed. Alongside PHP a lot of other depencies are installed,
+this way all the most common features of PHP are available. A cronjob has been setup which calls the internals
+of Laravel each minute, working with `Schedule`s is now really easy, no more hassle with cronjobs!
+
 ### Usage
 
 Create this Dockerfile in your Laravel application root directory:
@@ -41,9 +47,3 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 ```
-
-### Features
-
-Base image is an alpine image with the latest PHP installed. Alongside PHP a lot of other depencies are installed,
-this way all the most common features of PHP are available. A cronjob has been setup which calls the internals
-of Laravel each minute, working with `Schedule`s is now really easy, no more hassle with cronjobs!
