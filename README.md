@@ -1,6 +1,6 @@
 # laravel-docker 🐳
 
-Generic docker image for Laravel applications with minimal footprint and support for cronjobs. Inspired by: https://github.com/lorisleiva/laravel-docker.
+Generic docker image for Laravel applications with minimal footprint and support for cronjobs.
 
 ### Usage
 
