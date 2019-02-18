@@ -54,4 +54,5 @@ yarn-error.log
 .vscode
 .git
 .gitignore
+.gitmodules
 ```
