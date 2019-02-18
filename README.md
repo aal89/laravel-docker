@@ -30,7 +30,7 @@ RUN php artisan config:cache
 etc...
 ```
 
-*Note:* if port 8189 is not a good fit or you'd like to launch your application differently, feel free to overwrite the `CMD` line with one of your own. Don't
+**Note:** if port `8189` is not a good fit or you'd like to launch your application differently, feel free to overwrite the `CMD` line with one of your own. Don't
 forget to incorporate `crond` in there somewhere, otherwise your `Schedule`s won't run.
 
 Try using this as a `.dockerignore` file for minimal clutter inside the image:
