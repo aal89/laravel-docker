@@ -20,7 +20,7 @@ COPY . .
 RUN composer install --optimize-autoloader --no-dev
 ```
 
-And thats it! Build, tag and run the Docker image and you'll find your Laravel application running on port 8189.
+And thats it! Build, tag and run the Docker image and you'll find your Laravel application running on port `8189`.
 
 Optionally you could add in these steps to further optimize your Laravel application in production:
 
@@ -41,11 +41,11 @@ Try using this as a `.dockerignore` file for minimal clutter inside the image:
 /public/storage
 /storage/*.key
 /vendor
-.phpunit.result.cache
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+.phpunit.result.cache
 .DS_Store
 .hg
 .hgcheck
