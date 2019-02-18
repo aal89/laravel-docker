@@ -46,4 +46,12 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+.DS_Store
+.hg
+.hgcheck
+.hgignore
+.hgtags
+.vscode
+.git
+.gitignore
 ```
