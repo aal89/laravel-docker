@@ -1,4 +1,4 @@
-FROM php:alpine
+FROM php:7.1-alpine
 
 # Install dev dependencies
 RUN apk add --no-cache --virtual .build-deps \
@@ -29,7 +29,8 @@ RUN apk add --no-cache \
     postgresql-libs \
     rsync \
     zlib-dev \
-    libzip-dev
+    libzip-dev \
+    libjpeg-turbo-dev
 
 # Install PECL and PEAR extensions
 RUN pecl install \
@@ -39,6 +40,7 @@ RUN pecl install \
 RUN docker-php-ext-enable \
     imagick
 RUN docker-php-ext-configure zip --with-libzip
+RUN docker-php-ext-configure gd --with-jpeg-dir=/usr/include/
 RUN docker-php-ext-install \
     curl \
     iconv \
