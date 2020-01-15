@@ -37,10 +37,9 @@ RUN pecl install \
     imagick
 
 # Install and enable php extensions
-RUN docker-php-ext-enable \
-    imagick
 RUN docker-php-ext-configure zip --with-libzip
 RUN docker-php-ext-configure gd --with-jpeg-dir=/usr/include/
+RUN docker-php-ext-configure exif
 RUN docker-php-ext-install \
     curl \
     iconv \
@@ -54,7 +53,10 @@ RUN docker-php-ext-install \
     xml \
     gd \
     zip \
-    bcmath
+    bcmath \
+    exif
+RUN docker-php-ext-enable imagick
+RUN docker-php-ext-enable exif
 
 # Install composer
 ENV COMPOSER_HOME /composer
