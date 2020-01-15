@@ -1,6 +1,6 @@
 # laravel-docker 🐳
 
-Generic docker image for Laravel applications with minimal footprint and support for cronjobs.
+Generic docker image for Laravel applications with minimal footprint and support for cronjobs, gd configured and installed with jpeg support and configured/installed exif too. Comes with a production-like php.ini file with a maximum upload size set to 20M.
 
 ### Features
 
