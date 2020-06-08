@@ -1,12 +1,9 @@
 # laravel-docker 🐳
 
-Generic docker image for Laravel applications with minimal footprint and support for cronjobs, gd configured and installed with jpeg support and configured/installed exif too. Comes with a production-like php.ini file with a maximum upload size set to 20M.
-
-### Features
-
-Base image is an alpine image with the latest PHP installed. Alongside PHP a lot of other depencies are installed,
-this way all the most common features of PHP are available. A cronjob has been setup which calls the internals
-of Laravel each minute, working with `Schedule`s is now really easy, no more hassle with cronjobs!
+Generic docker image for Laravel applications with minimal footprint and support for cronjobs (so Laravel `Schedule`'s
+work), gd configured/installed with jpeg support, configured/installed exif and has installed Imagick. Comes with a
+production-like php.ini file with a maximum upload size set to 20M. Compressed docker image size is only 62mb. Php
+version is 7.2.
 
 ### Usage
 
@@ -30,8 +27,9 @@ RUN php artisan config:cache
 etc...
 ```
 
-**Note:** if port `8189` is not a good fit or you'd like to launch your application differently, feel free to overwrite the `CMD` line with one of your own. Don't
-forget to incorporate `crond` in there somewhere, otherwise your `Schedule`s won't run.
+**Note:** if port `8189` is not a good fit or you'd like to launch your application differently, feel free to overwrite
+the `CMD` line with one of your own. Don't forget to incorporate `crond` in there somewhere, otherwise your `Schedule`'s
+won't run.
 
 Try using this as a `.dockerignore` file for minimal clutter inside the image:
 
@@ -45,6 +43,7 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+.env
 .phpunit.result.cache
 .DS_Store
 .hg
